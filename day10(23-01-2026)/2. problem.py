@@ -1,0 +1,9 @@
+a="Aashritha"
+s=list(a)
+l=0
+h=len(s)-1
+while l<h:
+    s[l],s[h]=s[h],s[l]
+    l+=1
+    h-=1
+print("".join(s))

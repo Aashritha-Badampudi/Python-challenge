@@ -1,10 +1,10 @@
 #Selection sort
 a = [5,3,1,4,2]
-for j in range(len(a)):
-    pos=j
+for i in range(len(a)):
+    pos=i
     mini=pos
-    for i in range(pos,len(a)):
-        if a[i] < a[mini]:
-            mini = i
+    for j in range(pos,len(a)):
+        if a[j] < a[mini]:
+            mini = j
     a[mini],a[pos]=a[pos],a[mini]
 print(a)

@@ -28,10 +28,19 @@ class sll:
                 tc=tc.next
             print(" TC jumped from train")
 
+    def add_begin(self,num):
+        new=Node(num)
+        if self.head is None:
+            self.head=new
+        else:
+            new.next=self.head
+            self.head=new
+
 t=sll()
 t.add_end(10)
 t.add_end(20)
 t.add_end(30)
+t.add_begin(50)
 t.psll()
 t.add_end(40)
 t.psll()

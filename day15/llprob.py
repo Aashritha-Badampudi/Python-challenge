@@ -14,4 +14,3 @@ tc=head
 while tc!=None:
     print(tc.data)
     tc=tc.add
-print(tc)

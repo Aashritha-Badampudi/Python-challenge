@@ -12,5 +12,5 @@ n3.add=n4
 head=n1
 tc=head
 while tc!=None:
-    print(tc.data,end=" ")
+    print(tc.data,end="-->")
     tc=tc.add

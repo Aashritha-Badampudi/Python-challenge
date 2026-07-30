@@ -36,6 +36,17 @@ class sll:
             new.next=self.head
             self.head=new
 
+    def delete_end(self):
+        if self.head==None:
+            print("empty")
+        elif self.head.next==None:
+            self.head=None
+        else:
+            tc=self.head
+            while tc.next.next is not None:
+                tc=tc.next
+            tc.next=None
+
 t=sll()
 t.add_end(10)
 t.add_end(20)
@@ -43,4 +54,6 @@ t.add_end(30)
 t.add_begin(50)
 t.psll()
 t.add_end(40)
+t.psll()
+t.delete_end()
 t.psll()

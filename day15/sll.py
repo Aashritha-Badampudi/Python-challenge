@@ -85,6 +85,16 @@ class sll:
                 tc.next=temp.next
                 temp.next=None
                 del(temp)
+    def rev(self):
+        if self.head==None:
+            print("Can't do")
+        else:
+            last=None
+            prev=self.head.next
+            while self.head.next==last:
+                last=self.head
+                self.head=prev
+            self.head=last
 t=sll()
 t.add_end(10)
 t.add_end(20)
@@ -101,3 +111,5 @@ t.insert(80,0)
 t.psll()
 t.delete(2)
 t.psll()
+t.rev()
+t.psll

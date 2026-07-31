@@ -81,7 +81,7 @@ class sll:
             if c!=pos:
                 print("Pos not found")
             else:
-                temp=tc.next
+                temp=tc.next    #Temp is frnd of tc
                 tc.next=temp.next
                 temp.next=None
                 del(temp)

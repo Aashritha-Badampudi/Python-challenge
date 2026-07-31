@@ -51,6 +51,7 @@ class sll:
     def insert(self,data,pos):
         new=Node(data)
         if self.head is None or pos==0:
+            new.next=self.head
             self.head=new
         else:
             c=0
@@ -73,4 +74,6 @@ t.psll()
 t.delete_end()
 t.psll()
 t.insert(60,3)
+t.psll()
+t.insert(80,0)
 t.psll()

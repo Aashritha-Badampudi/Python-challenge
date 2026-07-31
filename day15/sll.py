@@ -63,6 +63,28 @@ class sll:
             new.next=tc.next
             tc.next=new
 
+    def delete(self,pos):
+        if self.head is None:
+            print("Cannot delete")
+        elif pos==0:
+            temp=self.head
+            self.head=self.head.next
+            temp.next=None
+            del(temp)
+        else:
+            tc=self.head
+            c=0
+            pos=pos-1
+            while tc.next!=None and c!=pos:
+                tc=tc.next
+                c+=1
+            if c!=pos:
+                print("Pos not found")
+            else:
+                temp=tc.next
+                tc.next=temp.next
+                temp.next=None
+                del(temp)
 t=sll()
 t.add_end(10)
 t.add_end(20)
@@ -76,4 +98,6 @@ t.psll()
 t.insert(60,3)
 t.psll()
 t.insert(80,0)
+t.psll()
+t.delete(2)
 t.psll()

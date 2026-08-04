@@ -30,7 +30,11 @@ Tree Traversal:
      2. Node left
      3. Node right
 
-3. Postorder
+3. Postorder : 
+   - There are 3 conditions
+     1. root left
+     2. root right
+     3. print
 '''
 class Node:
     def __init__(self,data):
@@ -73,3 +77,12 @@ def preorder(node):
         preorder(node.right)
 
 print(preorder(root))
+
+print("Postorder:")
+def postorder(node):
+    if node is not None:
+        postorder(node.left)
+        postorder(node.right)
+        print(node.data,end=" ")
+
+print(postorder(root))

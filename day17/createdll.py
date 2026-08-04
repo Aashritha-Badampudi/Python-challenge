@@ -65,7 +65,18 @@ class dll:
             new.next=tc.next
             tc.next=new             
 
-        
+    def delete_pos(self,data,pos):
+        if self.head is None and pos==0:
+            print("Empty")
+        else:
+            c=0
+            tc=self.head
+            pos=pos-1
+            while tc.next is not None and c!=pos:
+                tc=tc.next
+                c+=1
+            
+            
 
     def pdll(self):
         if self.head is None:

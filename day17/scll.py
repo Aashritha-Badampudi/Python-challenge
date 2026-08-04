@@ -47,6 +47,7 @@ class scll:
             new.next=self.head
             self.head=new
 
+        
 
     def pscll(self):
         if self.head is None:

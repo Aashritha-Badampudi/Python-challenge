@@ -24,7 +24,12 @@ Tree Traversal:
      2. Print
      3. Node Right
                  
-2. Preorder
+2. Preorder : 
+   - There are 3 conditions:
+     1. Print
+     2. Node left
+     3. Node right
+
 3. Postorder
 '''
 class Node:
@@ -51,10 +56,20 @@ n4.left=n5
 n6.left=n7
 n6.right=n8
 
+print("Inorder:")
 def inorder(node):
     if node is not None:
         inorder(node.left)
-        print(node.data)
+        print(node.data,end=" ")
         inorder(node.right)
 
 print(inorder(root))
+
+print("Preorder:")
+def preorder(node):
+    if node is not None:
+        print(node.data,end=" ")
+        preorder(node.left)
+        preorder(node.right)
+
+print(preorder(root))

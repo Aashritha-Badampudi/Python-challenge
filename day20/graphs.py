@@ -45,4 +45,19 @@ for u,v in g:
     adj[v].append(u)
 
 print(adj)
+
+#Sir method for creating adjacency list:
+g=[(1,2),(2,4),(4,9),(9,3),(3,1),(1,9)]
+adj={}
+for i in g:
+    if i[0] not in adj:
+        adj[i[0]]=[]
+    adj[i[0]].append(i[1])
+    if i[1] not in adj:
+        adj[i[1]]=[]
+    adj[i[1]].append(i[0])
+
+print(adj)
+
+
       

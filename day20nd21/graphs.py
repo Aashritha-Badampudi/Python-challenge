@@ -101,3 +101,15 @@ for i in g:
     matrix[i[1]][i[0]]=i[2]
 
 print(matrix)
+
+#0 in diag
+n = len(adj)
+matrix = []
+for i in range(n):
+    row = [0] * n
+    matrix.append(row)
+for u in adj:
+    for v in adj[u]:
+        matrix[u][v] = 1
+for row in matrix:
+    print(row)

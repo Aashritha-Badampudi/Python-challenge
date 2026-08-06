@@ -28,7 +28,20 @@ Graphs:
  8. Acyclic : There will be no cycles in the graph
 
  => There are 2 ways to implement:
- 1. Adjacency list
- 2. Adjacency matrix
+ 1. Adjacency list **G = [(1,2),(2,3),(3,4),(4,1),(2,4),(1,3)]**
+ 2. Adjacency matrix 
 
 '''
+g=[(1,2),(2,4),(4,9),(9,3),(3,1),(1,9)]
+adj={}
+for u,v in g:
+    if u not in adj:
+        adj[u]=[]
+    if v not in adj:
+        adj[v]=[]
+
+    adj[u].append(v)
+    adj[v].append(u)
+
+print(adj)
+      

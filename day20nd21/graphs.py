@@ -87,3 +87,17 @@ Eg: g=[(0,1,3),(1,2,9),(2,3,5),(3,0,6),(0,2,11),(1,3,2)]
        
 '''      
 #Code for adjacency matrix
+
+g=[(0,1,3),(1,2,9),(2,3,5),(3,0,6),(0,2,11),(1,3,2)]
+matrix=[]
+n=4
+for i in range(0,n):
+    r=[]
+    for j in range(0,n):
+        r.append(0)
+    matrix.append(r)
+for i in g:
+    matrix[i[0]][i[1]]=i[2]
+    matrix[i[1]][i[0]]=i[2]
+
+print(matrix)

@@ -32,6 +32,7 @@ Graphs:
  2. Adjacency matrix 
 
 '''
+#Creating Adjacency list
 g=[(1,2),(2,4),(4,9),(9,3),(3,1),(1,9)]
 adj={}
 for u,v in g:
